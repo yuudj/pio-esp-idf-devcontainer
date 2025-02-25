@@ -1,40 +1,38 @@
 {
-  /* A name for the dev container displayed in the UI */
-  "name": "PlatformIO (Community)",
-  /* mount the local folder to /workspaces folder of docker image */
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind",
-  /* the path of workspace folder, that means this folder will be opened after container is running
-   */
-  "workspaceFolder": "/workspaces/blink",
+  /* follow the commands of Dockerfile to create the container*/
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "platformio.platformio-ide",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-spanish"
+      ],
+      /* Machine specific settings that should be copied into the container
+       */
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
+    }
+  },
+  "forwardPorts": [
+    8008
+  ],
   /* mount the vscode extensions to the target path, and then they don't need to install again when rebuilding the container
    */
   "mounts": [
     "source=extensionCache,target=/root/.vscode-server/extensions,type=volume",
     "source=/dev/,target=/dev/,type=bind,consistency=consistent"
   ],
-  /* follow the commands of Dockerfile to create the container
-   */
-  "build": {
-    "dockerfile": "Dockerfile"
-  },
-  "customizations": {
-    "vscode": {
-      /* Machine specific settings that should be copied into the container
-       */
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh",
-      },
-      "extensions": [
-        "platformio.platformio-ide",
-        "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-spanish"
-      ]
-    }
-  },
+  /* A name for the dev container displayed in the UI */
+  "name": "PlatformIO (Community)",
+  "postAttachCommand": "sudo service udev restart",
   /* An array of extensions that should be installed into the container. */
-  
   /* start the container with privileged mode, else the devices cannot be accessed on the docker image.
    */
-  "runArgs": ["--privileged"],
-  "postAttachCommand": "sudo service udev restart"
+  "runArgs": [
+    "--privileged"
+  ]
 }
