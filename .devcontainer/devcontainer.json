@@ -1,8 +1,6 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/ubuntu
 {
   /* A name for the dev container displayed in the UI */
-  "name": "ESP-IDF",
+  "name": "PlatformIO (Community)",
   /* mount the local folder to /workspaces folder of docker image */
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces,type=bind",
   /* the path of workspace folder, that means this folder will be opened after container is running
@@ -11,7 +9,8 @@
   /* mount the vscode extensions to the target path, and then they don't need to install again when rebuilding the container
    */
   "mounts": [
-    "source=extensionCache,target=/root/.vscode-server/extensions,type=volume"
+    "source=extensionCache,target=/root/.vscode-server/extensions,type=volume",
+    "source=/dev/,target=/dev/,type=bind,consistency=consistent"
   ],
   /* follow the commands of Dockerfile to create the container
    */
@@ -23,21 +22,19 @@
       /* Machine specific settings that should be copied into the container
        */
       "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "idf.espIdfPath": "/opt/esp/idf",
-        "idf.customExtraPaths": "",
-        "idf.pythonInstallPath": "/opt/esp/python_env/idf5.4_py3.12_env/bin/python",
-        "idf.toolsPath": "/opt/esp",
-        "idf.gitPath": "/usr/bin/git"
+        "terminal.integrated.defaultProfile.linux": "zsh",
       },
-      "extensions": ["ms-vscode.cpptools", "espressif.esp-idf-extension", "platformio.platformio-ide",
-      "streetsidesoftware.code-spell-checker",
-      "streetsidesoftware.code-spell-checker-spanish"]
+      "extensions": [
+        "platformio.platformio-ide",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-spanish"
+      ]
     }
   },
   /* An array of extensions that should be installed into the container. */
   
   /* start the container with privileged mode, else the devices cannot be accessed on the docker image.
    */
-  "runArgs": ["--privileged"]
+  "runArgs": ["--privileged"],
+  "postAttachCommand": "sudo service udev restart"
 }
