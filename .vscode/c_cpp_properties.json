@@ -9,7 +9,6 @@
             "name": "PlatformIO",
             "includePath": [
                 "/workspaces/pio-esp-idf-devcontainer/include",
-                "/workspaces/pio-esp-idf-devcontainer/src",
                 "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/esp32/include",
                 "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/include",
                 "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/deprecated_include",
@@ -170,13 +169,15 @@
                 "/home/vscode/.platformio/packages/framework-espidf/components/rt/include",
                 "/home/vscode/.platformio/packages/framework-espidf/components/spiffs/include",
                 "/home/vscode/.platformio/packages/framework-espidf/components/wifi_provisioning/include",
+                "/workspaces/pio-esp-idf-devcontainer/managed_components/espressif__led_strip/include",
+                "/workspaces/pio-esp-idf-devcontainer/managed_components/espressif__led_strip/interface",
+                "/workspaces/pio-esp-idf-devcontainer/src",
                 ""
             ],
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
                     "/workspaces/pio-esp-idf-devcontainer/include",
-                    "/workspaces/pio-esp-idf-devcontainer/src",
                     "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/esp32/include",
                     "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/include",
                     "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/deprecated_include",
@@ -337,6 +338,9 @@
                     "/home/vscode/.platformio/packages/framework-espidf/components/rt/include",
                     "/home/vscode/.platformio/packages/framework-espidf/components/spiffs/include",
                     "/home/vscode/.platformio/packages/framework-espidf/components/wifi_provisioning/include",
+                    "/workspaces/pio-esp-idf-devcontainer/managed_components/espressif__led_strip/include",
+                    "/workspaces/pio-esp-idf-devcontainer/managed_components/espressif__led_strip/interface",
+                    "/workspaces/pio-esp-idf-devcontainer/src",
                     ""
                 ]
             },
