@@ -49,3 +49,9 @@ pio run --target clean
 ## 💡 Demo Code
 🔗 Get started with a simple **Blink** demo from Espressif’s official repository:  
 [ESP-IDF Blink Example](https://github.com/espressif/esp-idf/tree/master/examples/get-started/blink/main)  
+
+## LIBRARY MANAGEMENT
+
+
+ESPIDF : https://components.espressif.com
+platformio: https://registry.platformio.org/search
