@@ -8,7 +8,8 @@
       "extensions": [
         "platformio.platformio-ide",
         "streetsidesoftware.code-spell-checker",
-        "streetsidesoftware.code-spell-checker-spanish"
+        "streetsidesoftware.code-spell-checker-spanish",
+        "espressif.esp-idf-extension"
       ],
       /* Machine specific settings that should be copied into the container
        */
