@@ -10,6 +10,8 @@
             "includePath": [
                 "/workspaces/pio-esp-idf-devcontainer/include",
                 "/workspaces/pio-esp-idf-devcontainer/src",
+                "/workspaces/pio-esp-idf-devcontainer/.pio/libdeps/esp32dev/ThingsBoard/src",
+                "/workspaces/pio-esp-idf-devcontainer/.pio/libdeps/esp32dev/ArduinoJson/src",
                 "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/esp32/include",
                 "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/include",
                 "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/deprecated_include",
@@ -179,6 +181,8 @@
                 "path": [
                     "/workspaces/pio-esp-idf-devcontainer/include",
                     "/workspaces/pio-esp-idf-devcontainer/src",
+                    "/workspaces/pio-esp-idf-devcontainer/.pio/libdeps/esp32dev/ThingsBoard/src",
+                    "/workspaces/pio-esp-idf-devcontainer/.pio/libdeps/esp32dev/ArduinoJson/src",
                     "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/esp32/include",
                     "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/include",
                     "/home/vscode/.platformio/packages/framework-espidf/components/xtensa/deprecated_include",
